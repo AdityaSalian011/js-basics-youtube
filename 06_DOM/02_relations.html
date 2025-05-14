@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Relations</title>
+</head>
+<body style="background-color: #212121; color: #fff ;">
+    <div class="parent">
+        <!-- a random comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // to select the children inside parent we can use
+    // console.log(parent.children);
+    
+    // console.log(parent.children[2]);
+    
+    // looping over every children inside parent div
+    for(let i=0; i<parent.children.length; i++){
+        // console.log(parent.children[i].innerHTML);
+    }
+
+    // selecting first and last child of a parent
+    const firstChild = parent.firstElementChild
+    const lastChild = parent.lastElementChild
+
+    // console.log(firstChild);
+    // console.log(lastChild);
+
+    firstChild.style.backgroundColor = 'red'
+    lastChild.style.color = 'yellow'
+
+    // to give parent from a child class
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+    
+    // NODES
+    // gives an entire tree diagram including space and text
+    console.log(parent.childNodes);
+    
+</script>
+</html>
