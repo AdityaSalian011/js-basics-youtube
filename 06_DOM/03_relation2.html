@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff ;">
+    
+</body>
+<script>
+    // const myDiv = document.createElement('aditya')
+    const myDiv = document.createElement('div')
+    console.log(myDiv);
+    myDiv.className = 'custom-div'
+    myDiv.id = Math.floor(Math.random() * 10 + 1)
+    myDiv.setAttribute('title', 'a customized div')
+    myDiv.style.backgroundColor = 'green'
+
+    // to ways of writing content
+    // 1st
+    // myDiv.innerText = 'Relations in DOM'
+    // 2nd
+
+    const addTextInDiv = document.createTextNode('Relations in DOM')
+    myDiv.appendChild(addTextInDiv)
+    myDiv.style.padding = '10px'
+
+    document.body.appendChild(myDiv)
+</script>
+</html>
