@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove in DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="language">
+        <li>JavaScript</li>
+    </div>
+</body>
+<script>
+    function addLanguage(langName){
+        const myList = document.createElement('li')
+        myList.innerHTML = langName
+        document.querySelector('.language').appendChild(myList)
+    }
+    addLanguage('Python')
+    // not the best technique
+    // it treversed thoroughly
+    
+    function addOptLanguage(langName){
+        const myli = document.createElement('li')
+        const myTextContent = document.createTextNode(langName)
+        myli.appendChild(myTextContent)
+        document.querySelector('.language').appendChild(myli)
+    }
+    addOptLanguage('C++')
+    addOptLanguage('JavaScript')
+
+    // Editing in DOM
+    // 1st. Using replaceWith 
+    const secondLang = document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML = 'TypeScript'
+    const newli = document.createElement('li')
+    newli.appendChild(document.createTextNode('TypeScript'))
+    secondLang.replaceWith(newli)
+
+    // 2nd using OUTER HTML
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Python Again</li>'
+
+    // remove 
+    // removing last li element
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
