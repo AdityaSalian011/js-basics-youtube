@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics of Element</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h2>Random Images</h2>
+    <div>
+        <ol id="images">
+            <li>
+                <!-- <img id="ferry-wheel" width="200px" src="https://images.pexels.com/photos/29421579/pexels-photo-29421579.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="" onclick="alert('Ferrt Wheel Goes Crazzzy!!!')"> -->
+                <img id="ferry-wheel" width="200px" src="https://images.pexels.com/photos/29421579/pexels-photo-29421579.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+            </li>
+            <li>
+                <img id="mountain" width="200px" src="https://images.pexels.com/photos/29421578/pexels-photo-29421578.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+            </li>
+            <li>
+                <img id="train-ram" width="200px" src="https://images.pexels.com/photos/18148937/pexels-photo-18148937/free-photo-of-vintage-tram-on-a-street.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+            </li>
+            <li>
+                <img id="houses" width="200px" src="https://images.pexels.com/photos/18148936/pexels-photo-18148936.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+            </li>
+            <li>
+                <a id="search" href="https://www.google.com/" target="_blank">Google</a>
+            </li>
+        </ol>
+    </div>
+</body>
+<script>
+    // document.getElementById('mountain').onclick = function(){
+    //     alert("Beautiful Mountain Clicked!")
+    // }
+
+    // document.querySelector('#train-ram').addEventListener('click', function(e){
+    //     alert(`Train Ram Breaking Traffic Rules ${parseInt(e.timeStamp/1000)}`)
+    //     console.log(e);
+    //     console.log(e.type);
+    //     console.log(e.timeStamp);
+        
+    // }, false)
+
+    // document.getElementById('images').addEventListener('click', function(){console.log('Ordered List Clicked');
+    // }, true)
+
+    // bubble propogation
+
+    // document.getElementById('ferry-wheel').addEventListener('click', function(){console.log('Ferry Wheel Clicked');}, true)
+    // document.getElementById('images').addEventListener('click', function(){console.log('Ordered List Clicked');
+    // }, false)
+    // document.getElementById('ferry-wheel').addEventListener('click', function(){console.log('Ferry Wheel Clicked');}, false)
+
+    // stopping bubble propogation
+
+    // document.getElementById('images').addEventListener('click', function(){
+    //     console.log('Ordered List Clicked');
+    // })
+
+    // document.getElementById('ferry-wheel').addEventListener('click', function(e){
+    //     e.stopPropagation()
+    //     console.log('Ferry Wheel Clicked');
+    // })
+
+    // preventing default function of a tag
+    // document.getElementById('search').addEventListener('click', (e) => {
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log('Search google');
+        
+    // }, false)
+
+    // to remove images when clicked
+    const myImg = document.querySelectorAll('img')
+    myImg.forEach( (val) => {
+        val.addEventListener('click', (e) => {
+            val.remove()
+        })
+    } )
+</script>   
+</html>
