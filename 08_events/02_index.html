@@ -1,0 +1,42 @@
+<!-- Set timeout and clear Timeout in JAVASCRIPT -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMEOUT FUNCTION</title>
+</head>
+<body>
+    <h1>Learning about Timeout Function</h1>
+    <button id="stop">Stop Bruv</button>
+</body>
+<script>
+    // setTimeout(function(str){
+    //     console.log('ADITYA');
+    // }, 2000)
+
+    const myName = function(str){
+        console.log('Aditya');
+    }
+    // const myTime = setTimeout(myName, 2000, "hi")
+
+    
+    // to clear timeout
+    // clearInterval(myTime)
+    const newh1 = setTimeout(() => {
+        document.querySelector('h1').innerHTML = 'ADITYA'
+    }, 5000)
+    
+    // clearing timeout if button clicked
+    myTimeoutStopper = () => {
+        clearTimeout(newh1)
+        console.log('Timeout STOPPED');
+        
+    }
+    document.querySelector("#stop").addEventListener('click', 
+        myTimeoutStopper
+    )
+</script>
+</html>
