@@ -1,0 +1,48 @@
+<!-- INTERVAL IN JAVASCRIPT  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERVAL IN JAVASCRIPT</title>
+</head>
+<body>
+    <h1>SET AND CLEAR TIME INTERVAL IN JAVASCRIPT</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(() => {
+    //     console.log('Aditya');
+    // }, 2000)
+
+    // const myName = function(str){
+    //     console.log(str, Date.now());
+    // }
+
+    // const myTime = setInterval(myName, 1000, 'Akila')
+
+    // clear INterval
+    const myHTag =  () => {
+        let newH1 = document.createElement('h1')
+        let myContent = document.createTextNode("NEW H TAG ADDED, STOP BY PRESSING STOP BUTTON")
+        newH1.appendChild(myContent)
+        document.body.appendChild(newH1)
+    }
+    let myTime = undefined
+    document.querySelector("#start").addEventListener('click', function(){
+        myTime = setInterval(myHTag, 2000 )
+    })
+
+    // clear Interval
+    document.querySelector("#stop").addEventListener('click', function(){
+        clearInterval(myTime)
+        const myNewHTag = document.createElement('h1')
+        const textContent = document.createTextNode('stop button CLICKED!  EVENT ON PAUSE 😁')
+        myNewHTag.appendChild(textContent)
+        document.body.appendChild(myNewHTag)
+    })
+
+</script>
+</html>
